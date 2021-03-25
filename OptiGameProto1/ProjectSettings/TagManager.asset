@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Wall
+  - Ground
+  - Platform
+  - Coin0
+  - Coin01
+  - Coin05
+  - Coin10
+  - Coin25
+  - Wall1
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1178541927
+    locked: 0
+  - name: Wall
+    uniqueID: 1430947919
+    locked: 0
+  - name: Platform
+    uniqueID: 1899225243
+    locked: 0
+  - name: Player
+    uniqueID: 1599235471
+    locked: 0
+  - name: Pickups
+    uniqueID: 2200284049
+    locked: 0
