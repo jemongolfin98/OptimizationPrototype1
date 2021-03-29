@@ -22,10 +22,11 @@ public class PlayerController : MonoBehaviour
     private float timer = 0.0f;
     private bool gameOver;
 
-
+     private Vector2 preCollisionVelocity;
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1f;
         rb2d = GetComponent<Rigidbody2D>();
     }
 
@@ -60,6 +61,7 @@ public class PlayerController : MonoBehaviour
             rb2d.velocity = new Vector2(speed * -1, rb2d.velocity.y);
         if (Input.GetKey(KeyCode.RightArrow))
             rb2d.velocity = new Vector2(speed, rb2d.velocity.y);
+        preCollisionVelocity = rb2d.velocity;
     }
 
     void OnCollisionStay2D(Collision2D collision)
@@ -80,6 +82,10 @@ public class PlayerController : MonoBehaviour
             {
                 rb2d.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             }
+        }
+        if (collision.collider.tag == "down")
+        {
+            NullifyGlancing( collision );
         }
     }
 
@@ -187,5 +193,10 @@ public class PlayerController : MonoBehaviour
     public void GameActive()
     {
         gameOver = false;
+    }
+     private void NullifyGlancing( Collision2D collision )
+    {
+        rb2d.velocity = preCollisionVelocity;
+        // add more smarts here for ground and stuff
     }
 }

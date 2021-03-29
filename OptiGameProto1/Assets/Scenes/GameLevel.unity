@@ -3924,7 +3924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  jumpForce: 3
+  jumpForce: 5
   timeText: {fileID: 1838303385}
   currencyText: {fileID: 1449146102}
   finalcurrencyText: {fileID: 891052775}

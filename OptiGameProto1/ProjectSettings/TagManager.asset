@@ -13,6 +13,7 @@ TagManager:
   - Coin10
   - Coin25
   - Wall1
+  - down
   layers:
   - Default
   - TransparentFX
